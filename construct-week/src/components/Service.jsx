@@ -1,63 +1,131 @@
-import React, { useEffect, useState } from "react"
+// import React, { useEffect, useState } from "react"
 import "./service.css"
+import { useState,useEffect } from "react";
+import React from 'react'
 
-const getData = async (page) => {
-    try {
-      let res = await fetch(
-        `http://localhost:8080/products?_page=${page}&_limit=6`
-      );
-  
-      let data = await res.json();
-      return data;
-    } catch (error) {
-      console.log(error);
+
+const Service = () => {
+  const [data, setData] = useState([]);
+  const [title,setTitle]=useState("")
+  const [isLoading, setloading] = useState(true);
+  const [isError, setError] = useState(false);
+  const [orderby,setOrderby] = useState("")
+//   const [filterby,setFilterBy]=useState("")
+  const [search,setSearch]=useState("")
+  const [page, setPage] = useState(1);
+  const [orderbyy,setOrderbyy] = useState("")
+  const [price, setPrice]=useState("")
+ 
+// console.log(orderby)
+  useEffect(()=>{
+    let apiurl;
+    if (title==="all"){
+      apiurl = `http://localhost:8080/products?_page=${page}&_limit=6`
     }
-  };
+    else if(title){
+      apiurl = `http://localhost:8080/products?title=${title}&_limit=6`
+    }
+   else if (orderby){
+    apiurl = `http://localhost:8080/products?&_sort=price&_order=${orderby}?_page=${page}&_limit=6`
+   }
+   else if (orderbyy){
+    apiurl = `http://localhost:8080/products?&_sort=price&_order=${orderbyy}?_page=${page}&_limit=6`
+   }
 
-function Service(){
-    const [posts, setPosts] = useState([]);
-    const [page, setPage] = useState(1);
-    const [isLoading, setloading] = useState(true);
-    const [isError, setError] = useState(false);
-
-    useEffect(() => {
-        fetchAndUpdateData();
-      }, [page]);
+   else if (search){
+    apiurl = `http://localhost:8080/products?&q=${search}`
+   }
+   
+    else{
+      apiurl = `http://localhost:8080/products?_page=${page}&_limit=6`
+    }
+    fetch(apiurl).then((res)=>{
     
-      const fetchAndUpdateData = async () => {
-        try {
-          setloading(true);
-          const datas = await getData(page);
-          setPosts(datas);
-          setloading(false);
-        } catch (error) {
-          console.log(error);
-          setError(true);
-          setloading(false);
-        }
-      };
-      if (isLoading) {
-        return <h1>Loading...</h1>;
-      }
-      if (isError) {
-        return <h1>Something wrong happened</h1>;
-      }
-      console.log(posts)
+      return res.json()
+    }).then((res)=>
+   
+  {
+
+    setloading(true)
+    setData(res)
+    setloading(false)
+    setError(false)
+  }
+    )
+  },[title,orderby,search,page,orderbyy]);
+
+   console.log(data)
+  // console.log(category)
+  console.log(search)
+  if (isLoading) {
+            return <h1>Loading...</h1>;
+          }
+  if (isError) {
+    return <h1>Something wrong happened</h1>;
+  }
       const handleChange=(val)=>{
         const updatePage=page+val
         setPage(updatePage)
       }
 
+
+      let filtered = data.filter((ele)=>{
+        if((ele.title.toUpperCase().includes((search).toUpperCase())===true) && ele.price>=price ){
+            return true
+        }
+        
+        else{
+            return false
+        }
+      })
+
+
     return <>
      <h1 className="Heading">All the Courses</h1>
+     <div className="search" style={{textAlign:"center", }}>
+        <input style={{}}  placeholder="SearchByTitle" onChange={(e)=>setSearch(e.target.value)}/>
+        <button style={{}}>Submit</button>
+     </div>
+      
      <div className="mount">
     <div className="product">
-
+         <div>
+            <h2>Sort by price</h2>
+          <button  value="asc" onClick={(e)=>setOrderby(e.target.value)} style={{fontSize:"20px",width:"200px",height:"40px",cursor:"pointer"}}>Low To High</button>
+          <br />
+          <br />
+          <button value="desc" onClick={(e)=>setOrderbyy(e.target.value)} style={{fontSize:"20px",width:"200px",height:"40px",cursor:"pointer"}}>High To Low</button>
+          </div>
+          <div>
+            <h3>Select By Category</h3>
+            <select style={{fontSize:"20px",width:"200px",height:"40px",cursor:"pointer"}} className="category" onChange={(e)=>setTitle(e.target.value)}>
+            <option value="all">All Categories</option>
+            <option value="MY SQL">MY SQL</option>
+            <option value="Chakra Learning">Chakra Learning</option>
+            <option value="Phython Learning">Phython Learning</option>
+            <option value="HTML Learning">HTML Learning</option>
+            <option value="React js Learning">React js Learning</option>
+            <option value="CSS">CSS</option>
+            <option value="Chakra Learning">Chakra Learning</option>
+            <option value="XQuery">XQuery</option>
+          </select>
+          </div>
+          <br />
+          <br />
+          <div>
+          <select className="round"  style={{}} onChange={(e)=>setPrice(e.target.value)}>
+            <option value="">Sort By Price</option>
+            <option value="1000">Price Greater 1000</option>
+            <option value="2000">Price Greater 2000</option>
+            <option value="4000">Price Greater 4000</option>
+        </select>
+          </div>
+       
     </div>
     <div className="mount2">
    
       <div className="main2">
-        {posts.map((ele)=>(
+        {filtered.map((ele)=>(
            <div className="mapdiv">
             <img src={ele.image} alt="Yash" />
              

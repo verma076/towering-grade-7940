@@ -2,6 +2,7 @@
 import "./service.css"
 import { useState,useEffect } from "react";
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 
 const Service = () => {
@@ -10,13 +11,12 @@ const Service = () => {
   const [isLoading, setloading] = useState(true);
   const [isError, setError] = useState(false);
   const [orderby,setOrderby] = useState("")
-//   const [filterby,setFilterBy]=useState("")
   const [search,setSearch]=useState("")
   const [page, setPage] = useState(1);
   const [orderbyy,setOrderbyy] = useState("")
   const [price, setPrice]=useState("")
- 
-// console.log(orderby)
+  let navigate = useNavigate(); 
+
   useEffect(()=>{
     let apiurl;
     if (title==="all"){
@@ -54,9 +54,15 @@ const Service = () => {
     )
   },[title,orderby,search,page,orderbyy]);
 
-   console.log(data)
-  // console.log(category)
-  console.log(search)
+//    console.log(data)
+  
+//   console.log(search)
+
+
+      const routeChange = () =>{ 
+        let path = `/contact`; 
+        navigate(path);
+      }
   if (isLoading) {
             return <h1>Loading...</h1>;
           }
@@ -78,6 +84,7 @@ const Service = () => {
             return false
         }
       })
+      
 
 
     return <>
@@ -133,7 +140,7 @@ const Service = () => {
             
             <p >Description:-{ele.message}</p>
             <p style={{marginTop:"-1px"}}>Price:-{ele.price}</p>
-            <button className="btn-hover color-1" style={{marginBottom:"0px"}}>{ele.button}</button>
+            <button onClick={routeChange} className="btn-hover color-1" style={{marginBottom:"0px"}}>{ele.button}</button>
            
            
            </div>

@@ -1,0 +1,204 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "john.doe",
+        "password": "password123",
+        "role": "admin"
+      },
+      {
+        "id": 2,
+        "username": "jane.doe",
+        "password": "password456",
+        "role": "user"
+      },
+      {
+        "id": 3,
+        "username": "bob.smith",
+        "password": "password789",
+        "role": "user"
+      }
+    ],
+    "products": [
+      {
+        "id": 1,
+        "title": "Phython Learning",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "4000",
+         "image":"https://th.bing.com/th/id/OIP.yoQwUlomxcQOAmYHSOfy8wHaD4?pid=ImgDet&rs=1",
+         "button":"Join Course"
+      },
+      {
+        "id": 2,
+        "title": "Chakra Learning",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "6000",
+         "image": "https://th.bing.com/th/id/OIP.AeDDNEgcN2lSWT0ruiMAcwAAAA?pid=ImgDet&rs=1",
+         "button":"Join Course"
+      },
+      {
+        "id": 3,
+        "title": "Phython Learning",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "9000",
+         "image": "https://th.bing.com/th/id/OIP.5-vMYdG8C7gpgqwJJV_xhgHaEK?pid=ImgDet&rs=1",
+         "button":"Join Course"
+      },
+      {
+        "id": 4,
+        "title": "HTML Learning",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "5000",
+         "image": "https://th.bing.com/th/id/OIP.aMxh8Wc2uB4aXXuFWs_SCgHaFh?pid=ImgDet&rs=1",
+         "button":"Join Course"
+      },
+      {
+        "id": 5,
+        "title": "React js Learning",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "1000",
+         "image": "https://th.bing.com/th/id/OIP.a4QqBWGbYcOufT8rLt2f0QHaFW?w=233&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+         "button":"Join Course"
+      },
+      {
+        "id": 6,
+        "title": "ActionScript",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "2000",
+         "image": "https://th.bing.com/th/id/R.2376037b33410f30abce6a01ebebe432?rik=aqgKHpHaYLqxQA&riu=http%3a%2f%2fcdn.lynda.com%2fcourses%2f123492-637490922177306538_540x960_thumb.jpg&ehk=wQqrr318I%2b4g9zNeJUK3YWE0y%2fsTrSjsKls0onZK%2fO0%3d&risl=&pid=ImgRaw&r=0",
+         "button":"Join Course"
+      },
+      {
+        "id": 7,
+        "title": "Apache",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "6000",
+         "image": "https://th.bing.com/th/id/OIP.PuZ1GAkWkRMFKNeChPNViwHaEK?pid=ImgDet&rs=1",
+         "button":"Join Course"
+      },
+      {
+        "id": 8,
+        "title": "XQuery",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "7000",
+         "image": "https://www.educba.com/academy/wp-content/uploads/2020/03/XQuery.jpg",
+         "button":"Join Course"
+      },
+      {
+        "id": 9,
+        "title": "MY SQL",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "8000",
+         "image": "https://th.bing.com/th/id/R.56be39b55e59a1d84ab9e94053883c67?rik=gHWZ3YLbCPysww&riu=http%3a%2f%2fwww.linuxbe.com%2fmysql-course.jpg&ehk=UcoEw9RBbElO%2fav8uGIzFM9qGTwBM0tSv7bRbINyNQg%3d&risl=&pid=ImgRaw&r=0",
+         "button":"Join Course"
+      },
+      {
+        "id": 10,
+        "title": "CSS",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "2000",
+         "image": "https://th.bing.com/th/id/OIP.1plA-8OKM_ohQxV0jm-iNgHaEK?pid=ImgDet&rs=1",
+         "button":"Join Course"
+      },
+      {
+        "id": 11,
+        "title": "Phython Learning",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "4000",
+         "image":"https://th.bing.com/th/id/OIP.7gT_UEyHy7p_9FtAOaB5bgHaFR?pid=ImgDet&rs=1",
+         "button":"Join Course"
+      },
+      {
+        "id": 12,
+        "title": "Chakra Learning",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "6000",
+         "image": "https://th.bing.com/th/id/OIP.AeDDNEgcN2lSWT0ruiMAcwAAAA?pid=ImgDet&rs=1",
+         "button":"Join Course"
+      },
+      {
+        "id": 13,
+        "title": "Phython Learning",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "9000",
+         "image": "https://th.bing.com/th/id/OIP.5-vMYdG8C7gpgqwJJV_xhgHaEK?pid=ImgDet&rs=1",
+         "button":"Join Course"
+      },
+      {
+        "id": 14,
+        "title": "HTML Learning",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "5000",
+         "image": "https://th.bing.com/th/id/OIP.aMxh8Wc2uB4aXXuFWs_SCgHaFh?pid=ImgDet&rs=1",
+         "button":"Join Course"
+      },
+      {
+        "id": 15,
+        "title": "React js Learning",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "1000",
+         "image": "https://th.bing.com/th/id/OIP.a4QqBWGbYcOufT8rLt2f0QHaFW?w=233&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+         "button":"Join Course"
+      },
+      {
+        "id": 16,
+        "title": "ActionScript",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "2000",
+         "image": "https://th.bing.com/th/id/R.2376037b33410f30abce6a01ebebe432?rik=aqgKHpHaYLqxQA&riu=http%3a%2f%2fcdn.lynda.com%2fcourses%2f123492-637490922177306538_540x960_thumb.jpg&ehk=wQqrr318I%2b4g9zNeJUK3YWE0y%2fsTrSjsKls0onZK%2fO0%3d&risl=&pid=ImgRaw&r=0",
+         "button":"Join Course"
+      },
+      {
+        "id": 17,
+        "title": "Apache",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "6000",
+         "image": "https://th.bing.com/th/id/OIP.PuZ1GAkWkRMFKNeChPNViwHaEK?pid=ImgDet&rs=1",
+         "button":"Join Course"
+      },
+      {
+        "id": 18,
+        "title": "XQuery",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "7000",
+         "image": "https://www.educba.com/academy/wp-content/uploads/2020/03/XQuery.jpg",
+         "button":"Join Course"
+      },
+      {
+        "id": 19,
+        "title": "MY SQL",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "8000",
+         "image": "https://th.bing.com/th/id/R.56be39b55e59a1d84ab9e94053883c67?rik=gHWZ3YLbCPysww&riu=http%3a%2f%2fwww.linuxbe.com%2fmysql-course.jpg&ehk=UcoEw9RBbElO%2fav8uGIzFM9qGTwBM0tSv7bRbINyNQg%3d&risl=&pid=ImgRaw&r=0",
+         "button":"Join Course"
+      },
+      {
+        "id": 20,
+        "title": "CSS",
+        "message": "The Complete Python Bootcamp From Zero to Hero in Python",
+        "category": "Technical course",
+         "price": "2000",
+         "image": "https://th.bing.com/th/id/OIP.1plA-8OKM_ohQxV0jm-iNgHaEK?pid=ImgDet&rs=1",
+         "button":"Join Course"
+      }
+    ]
+  }

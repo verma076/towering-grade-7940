@@ -1,0 +1,98 @@
+.Heading{
+    text-align: center;
+    border: 1px solid red;
+}
+
+.mapdiv{
+    width: 80%;
+    height: 450px;
+    border: 1px solid red;
+    /* margin-left: 50px; */
+    /* margin: auto; */
+
+}
+
+.mapdiv>img{
+    width: 100%;
+    height:200px
+    /* border: 1px solid red; */
+    
+
+}
+
+.main2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border: 1px solid red;
+    margin-left:450px;
+    width:65%;
+    height:950px;
+    /* gap:-3px */
+    
+
+}
+
+/* .mapdiv>button{
+    border: 1px solid red;
+    background: linear-gradient(90deg, rgba(253,29,29,0.9220938375350141) 32%, rgba(252,69,137,0.9697128851540616) 67%);
+} */
+.btn-hover {
+    width: 150px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    /* margin: 20px; */
+    height: 30px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    /* moz-transition: all .4s ease-in-out; */
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    /* moz-transition: all .4s ease-in-out; */
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+.btn-hover.color-1 {
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+.page{
+    margin-top: 20px;
+   margin-left: 900px;
+   height:150px
+   
+
+}
+.page button{
+    font-size: 20px;
+}
+.product{
+    /* margin-top: 100px; */
+    width:400px;
+    height:500px;
+    border: 1px solid red;
+}
+.mount{
+    width:95%;
+    height:1000px;
+    border: 1px solid red;
+    display: flex;
+    margin: auto;
+}
+.mount2{
+    margin-left:-250px
+}

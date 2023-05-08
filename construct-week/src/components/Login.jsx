@@ -40,25 +40,28 @@ const handleSubmit=(e)=>{
   return (
      <>
     <div style={{background:"grey"}}>
-    <div className="login-page" style={{background:"coral", marginTop:"15px", textAlign:"center", width:"500px", height:"550px",marginLeft:"550px",boxShadow:"rgba(0, 0, 0, 0.35) 0px 5px 15px"}}>
+    <div className="login-page" style={{background:"coral", marginTop:"15px", textAlign:"center", width:"600px", height:"700px",marginLeft:"550px",boxShadow:"rgba(0, 0, 0, 0.35) 0px 5px 15px"}}>
       <br/>
       <br/>
-       <img style={{height:"150px",width:"180px"}} src="https://profpjm.com/wp-content/uploads/Coding-Academy-Logo-1.png" alt="" />
-      <h4>CODING ACADEMY</h4>
+       <img style={{height:"250px",width:"280px"}} src="https://profpjm.com/wp-content/uploads/Coding-Academy-Logo-1.png" alt="" />
+      <h1>CODING ACADEMY</h1>
       <h1>Sign in </h1>
-      <h4>New user? Create an account</h4>
-      <form className="form" data-testid="login-form" onSubmit={handleSubmit}>
+      <h2>New user? Create an account</h2>
+      <form className="form" onSubmit={handleSubmit}>
         <div >
           <label>
-            <input data-testid="email-input" type="email" placeholder="email" value={email}
+            <input style={{width:"400px",height:"30px" ,fontSize:"30px"}}
+              type="email"
+               placeholder="email" 
+               value={email}
             onChange={(e)=>setEmail(e.target.value)} />
           </label>
         </div>
+        <br />
         <div>
          
           <label>
-            <input
-              data-testid="password-input"
+            <input style={{width:"400px",height:"30px",fontSize:"50px"}}
               type="password"
               placeholder="password"
               value={password}
@@ -67,7 +70,7 @@ const handleSubmit=(e)=>{
           </label>
         </div>
         <div>
-          <button data-testid="form-submit" type="submit" disabled={isDisabled} style={{background:"yellow"}}>
+          <button  type="submit" disabled={isDisabled}style={{width:"100px",height:"30px",fontSize:"20px",backgroundColor:"plum",cursor:"pointer"}}>
             SUBMIT
           </button>
         </div>

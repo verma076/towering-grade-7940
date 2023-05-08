@@ -1,6 +1,7 @@
 import "./home.css"
 import Footer from "./Footer"
 
+
 function Home(){
     return(
         <div>
@@ -97,6 +98,7 @@ function Home(){
     </div>
 
 <Footer/>
+
 
     </div>
     )

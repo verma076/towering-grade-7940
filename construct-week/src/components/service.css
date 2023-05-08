@@ -1,14 +1,12 @@
 .Heading{
     text-align: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .mapdiv{
     width: 80%;
     height: 450px;
-    border: 1px solid red;
-    /* margin-left: 50px; */
-    /* margin: auto; */
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
 
 }
 
@@ -23,11 +21,12 @@
 .main2{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    border: 1px solid red;
-    margin-left:450px;
-    width:65%;
+    /* border: 1px solid red; */
+    margin-left:300px;
+    width:75%;
     height:950px;
     /* gap:-3px */
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
     
 
 }
@@ -83,16 +82,94 @@
 .product{
     /* margin-top: 100px; */
     width:400px;
-    height:500px;
-    border: 1px solid red;
+    height:800px;
+    /* border: 1px solid red; */
+    /* font-size: 50px; */
 }
 .mount{
-    width:95%;
+    width:98%;
     height:1000px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     margin: auto;
 }
 .mount2{
-    margin-left:-250px
+    /* margin-left:-250px */
+    margin-right: 200px;
+    /* width: 100px; */
+    margin: auto;
+    width:200%
 }
+.order{
+    font-size: 20px;
+}
+.category {  
+    background-color:#1F99CD;
+   
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: auto 50%;
+    border-radius:2px;
+    border:none;
+    color: #ffffff;
+    padding: 10px 30px 10px 10px;
+    /* margin-left: 10px; */
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    &::-ms-expand { display: none };
+  }
+  .round {
+
+    /* styling */
+    background-color: rgb(236, 236, 215);
+    border: thin solid blue;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+  
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+   
+  }
+  .round {
+    background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%),
+      radial-gradient(#ddd 70%, transparent 72%);
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - .5em) .5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1.5em 1.5em;
+    background-repeat: no-repeat;
+  }
+  
+  .round:focus {
+    background-image:
+      linear-gradient(45deg, white 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, white 50%),
+      radial-gradient(gray 70%, transparent 72%);
+    background-position:
+      calc(100% - 15px) 1em,
+      calc(100% - 20px) 1em,
+      calc(100% - .5em) .5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1.5em 1.5em;
+    background-repeat: no-repeat;
+    border-color: green;
+    outline: 0;
+  }
+  
+ 
+  

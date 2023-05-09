@@ -54,9 +54,6 @@ const Service = () => {
     )
   },[title,orderby,search,page,orderbyy]);
 
-//    console.log(data)
-  
-//   console.log(search)
 
 
       const routeChange = () =>{ 
@@ -137,6 +134,7 @@ const Service = () => {
    
     <hr />
     <hr />
+    <hr />
     <div className="mount2">
         <br />
    
@@ -144,10 +142,8 @@ const Service = () => {
         {filtered.map((ele)=>(
            <div className="mapdiv">
             <img src={ele.image} alt="Yash" />
-             
              <h2 >{ele.title}</h2>
              <br />
-            
             <p >Description:-{ele.message}</p>
             <br />
             <h5 style={{marginTop:"-1px"}}>Price:-{ele.price}</h5>
@@ -160,8 +156,6 @@ const Service = () => {
       </div>
     </div>
     </div>
-     
-
       <div className="page">
         <button disabled={page===1} onClick={()=>handleChange(-1)}>prev</button>
         <button>{page}</button>

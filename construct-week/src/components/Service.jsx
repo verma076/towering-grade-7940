@@ -89,23 +89,26 @@ const Service = () => {
 
     return <>
      <h1 className="Heading">All the Courses</h1>
-     <div className="search" style={{textAlign:"center", }}>
-        <input style={{}}  placeholder="SearchByTitle" onChange={(e)=>setSearch(e.target.value)}/>
-        <button style={{}}>Submit</button>
+     <div className="search" style={{textAlign:"center"}}>
+        <input   placeholder="SearchByTitle" onChange={(e)=>setSearch(e.target.value)}/>
+        <button >Submit</button>
      </div>
       
      <div className="mount">
     <div className="product">
          <div>
             <h2>Sort by price</h2>
-          <button  value="asc" onClick={(e)=>setOrderby(e.target.value)} style={{fontSize:"20px",width:"200px",height:"40px",cursor:"pointer"}}>Low To High</button>
+            <br />
+          <button className="btn-hover"  value="asc" onClick={(e)=>setOrderby(e.target.value)} style={{fontSize:"20px",width:"200px",height:"40px",cursor:"pointer"}}>Low To High</button>
           <br />
           <br />
-          <button value="desc" onClick={(e)=>setOrderbyy(e.target.value)} style={{fontSize:"20px",width:"200px",height:"40px",cursor:"pointer"}}>High To Low</button>
+          <button className="btn-hover" value="desc" onClick={(e)=>setOrderbyy(e.target.value)} style={{fontSize:"20px",width:"200px",height:"40px",cursor:"pointer"}}>High To Low</button>
           </div>
+          <br />
           <div>
             <h3>Select By Category</h3>
-            <select style={{fontSize:"20px",width:"200px",height:"40px",cursor:"pointer"}} className="category" onChange={(e)=>setTitle(e.target.value)}>
+            <br />
+            <select style={{fontSize:"18px",width:"200px",height:"45px",cursor:"pointer"}} className="category" onChange={(e)=>setTitle(e.target.value)}>
             <option value="all">All Categories</option>
             <option value="MY SQL">MY SQL</option>
             <option value="Chakra Learning">Chakra Learning</option>
@@ -120,7 +123,9 @@ const Service = () => {
           <br />
           <br />
           <div>
-          <select className="round"  style={{}} onChange={(e)=>setPrice(e.target.value)}>
+            <h1>Sort By Price</h1>
+            <br />
+          <select className="round"  onChange={(e)=>setPrice(e.target.value)}>
             <option value="">Sort By Price</option>
             <option value="1000">Price Greater 1000</option>
             <option value="2000">Price Greater 2000</option>
@@ -129,7 +134,11 @@ const Service = () => {
           </div>
        
     </div>
+   
+    <hr />
+    <hr />
     <div className="mount2">
+        <br />
    
       <div className="main2">
         {filtered.map((ele)=>(
@@ -137,9 +146,12 @@ const Service = () => {
             <img src={ele.image} alt="Yash" />
              
              <h2 >{ele.title}</h2>
+             <br />
             
             <p >Description:-{ele.message}</p>
-            <p style={{marginTop:"-1px"}}>Price:-{ele.price}</p>
+            <br />
+            <h5 style={{marginTop:"-1px"}}>Price:-{ele.price}</h5>
+            <br />
             <button onClick={routeChange} className="btn-hover color-1" style={{marginBottom:"0px"}}>{ele.button}</button>
            
            
